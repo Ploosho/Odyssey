@@ -537,12 +537,12 @@ extension ViewController {
 }
 
 func isJailbroken() -> Bool {
-    var flags = UInt32()
+    /*var flags = UInt32()
     let CS_OPS_STATUS = UInt32(0)
     csops(getpid(), CS_OPS_STATUS, &flags, 0)
     if flags & Consts.shared.CS_PLATFORM_BINARY != 0 {
         return true
-    }
+    }*/
     
     let imageCount = _dyld_image_count()
     for i in 0..<imageCount {
